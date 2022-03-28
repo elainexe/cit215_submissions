@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+    <input type="text" v-model="nameInput" placeholder="Name" />
+    <br />
+    <input type="text" v-model="emailInput" placeholder="Email" />
+    <br />
+    <div>{{message}}</div>
+    <div>{{submitted}}</div>
+
+    <codenames v-for="char in chars" v-bind:name="char.name" v-bind:codename="char.codename"></codenames>
+</div>
+
+<script src="vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
